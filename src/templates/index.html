@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/jpg" href="../static/images/favicon.jpg"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </head>
+    <title>Lost Meadow</title>
+    <body>
+        <div class="navbar">
+            <nav class="navbar-inner border-bottom">
+                <nav class="navbar navbar-light">
+                    <a class="brand" href="/">lostmeadow</a>
+                    <ul class="list-inline">
+                        <a class="btn btn-md btn-outline-secondary" href="/about">about</a>
+                        <a class="btn btn-md btn-outline-secondary" href="/blog">blog</a>
+                        <a class="btn btn-md btn-outline-secondary" href="/privacy">privacy</a>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+
+        <div class="container-sm">
+            <div class="container-intro">
+                <p>don't let our countryside become as bland as this webpage. <br>
+                let's add the colour back to our flower meadows. <br>
+                upload your image of a flower and we will tell you
+                if it is a wildflower species to be cherised and protected.</p>
+            </div>
+        </div>
+        <div>
+
+            <div class="image-container">
+                <div id="result"/>
+            </div>
+
+            <form action="/api/classify" method="post" enctype="multipart/form-data">
+                 <div class="classification-group">
+                     <div class="classification-form">
+                         <input type="file" name="image" id="image" accept="image/*" required style="display:none;">
+                        <label for="image" id="custom-file-label" class="btn btn-lg btn-outline-secondary">select image</label>
+                     </div>
+                     <div class="classification-form-name">
+                         <span id="file-name" class="ml-2"></span> <!-- Add this line to create a new element for displaying the file name -->
+                     </div>
+                     <div class="classification-form">
+                         <button class="btn btn-lg btn-outline-secondary" type="submit">classify</button>
+                    </div>
+                 </div>
+            </form>
+
+            <div class="image-container">
+                <div class="image">
+                    <img id="preview-image" src="" alt="Image preview" style="display:none" class="rounded"/>
+                </div>
+            </div>
+
+            <div class="image-container">
+                <div id="explanation"/>
+            </div>
+        </div>
+        <footer>
+            <p class="footer-text">&copy; 2023 LostMeadow. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,297 @@
+
+    body {
+        font-family: 'Roboto Mono', sans-serif;
+        margin: 20px;
+    }
+
+    .list-inline {
+        list-style: none;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #000!important;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin: 0 1rem 1rem;
+    }
+
+    main {
+        max-width: 60%;
+        font-size: 20px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    main.about-us{
+        border-bottom: 1px solid #000!important;
+        border-top: 1px solid #000!important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 4rem;
+    }
+
+    .container {
+        max-width: 50%;
+        margin-right: 10%;
+        float: right;
+    }
+
+        .container-sm {
+            max-width: 50%;
+            margin-top: 5rem;
+            margin-left: 25%;
+        }
+
+        .container-intro {
+           font-size: 26px;
+           line-height: 55px;
+           text-align: center;
+           margin: 0px 20px 20px;
+        }
+
+    footer {
+        max-width: 99%;
+        min-height: 100%;
+        border-top: 1px solid #000;
+        text-align: center;
+        margin-left: 0.5%;
+        margin-top: 5%;
+        padding-top: 1%;
+    }
+
+    p {
+        margin: 0 0 20px;
+    }
+
+        p.footer-text {
+            background-color: #ffffff !important;
+            padding: 8px 16px;
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+
+    a {
+        colour: #000000;
+        font-size: 20px;
+    }
+        a:active,a:hover {
+            color: #000000;
+            text-decoration: underline;
+            background-color: white;
+        }
+        a.brand {
+            font-size: 62px;
+            color: #000000;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 8px 16px;
+        }
+         a.btn.btn-md.btn-outline-secondary {
+            color: #000;
+            background-color: #ffffff;
+            background-image: none;
+            border-color: #6c757d;
+            font-size: 30px;
+        }
+
+    .navbar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        padding: 1.5rem 1rem;
+        min-width: 100%;
+    }
+
+        nav.navbar-inner.border-bottom {
+            min-width: inherit;
+        }
+
+    .classification-group {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    button.btn.btn-lg.btn-outline-secondary {
+        color: #000000;
+        background-color: white;
+        background-image: none;
+        border-color: #6c757d;
+        font-size: 30px;
+    }
+
+    label#custom-file-label {
+        color: #000000;
+        background-color: white;
+        background-image: none;
+        border-color: #6c757d;
+        font-size: 30px;
+    }
+
+    span#file-name {
+        color: #000000;
+        background-color: white;
+        background-image: none;
+        font-size: 30px;
+        padding: 8px 16px;
+    }
+
+    .classification-form-name {
+        padding: 8px 16px;
+    }
+
+    .result-item {
+        font-size: 24px;
+        text-align: center;
+        background-color: white;
+        padding: 8px 16px;
+    }
+
+    div#result {
+        font-size: 24px;
+        text-align: center;
+        background-color: white;
+        padding: 8px 16px;
+        max-width: 60%;
+        margin-left: 20%;
+        margin-bottom: 2%;
+        line-height: 50px;
+    }
+
+    div#explanation {
+        font-size: 24px;
+        text-align: center;
+        background-color: white;
+        padding: 8px 16px;
+        max-width: 60%;
+        margin-left: 20%;
+        line-height: 50px;
+    }
+
+    .image {
+        padding: 50px;
+    }
+
+        img#preview-image {
+            margin-inline: auto;
+            min-width: 600px;
+            max-width: 600px;
+            border-radius: 20px !important;
+            border: 30px solid white;
+        }
+
+        img#blog-image-1 {
+            max-width: 100%;
+            float: right;
+            padding-left: 25px;
+        }
+
+    text {
+        color: red;
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+
+    article.blog-post {
+        border-bottom: 1px solid #000!important;
+        border-top: 1px solid #000!important;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-top: 2rem;
+    }
+    @media (max-width: 1024px) {
+        body {
+            font-family: 'Roboto Mono', sans-serif;
+            margin: 20px;
+        }
+
+        a.brand {
+            font-size: 40px;
+            color: #000000;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 8px 16px;
+        }
+
+        a.btn.btn-md.btn-outline-secondary {
+            color: #000;
+            background-color: white;
+            background-image: none;
+            border-color: #6c757d;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 100%;
+
+        }
+            .container-sm {
+                margin-top: 5rem;
+                max-width: 50%;
+            }
+
+            .container-intro {
+               font-size: 24px;
+               line-height: 50px;
+               text-align: center;
+               margin: 0px 20px 20px;
+            }
+    }
+
+    @media (max-width: 769px) {
+        body {
+            font-family: 'Roboto Mono', sans-serif;
+            margin: 20px;
+            max-width: 768px;
+        }
+
+        a.brand {
+            font-size: 30px;
+            color: #000000;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 8px 16px;
+        }
+
+        a.btn.btn-md.btn-outline-secondary {
+            color: #000;
+            background-color: white;
+            background-image: none;
+            border-color: #6c757d;
+            font-size: 20px;
+        }
+
+    }
+
+    @media (max-width: 426px) {
+        body {
+            font-family: 'Roboto Mono', sans-serif;
+            margin: 20px;
+            max-width: 425px;
+        }
+
+        a.brand {
+            font-size: 20px;
+            color: #000000;
+            text-decoration: none;
+            background-color: #fff;
+            padding: 8px 16px;
+        }
+
+        a.btn.btn-md.btn-outline-secondary {
+        color: #000;
+            background-color: white;
+            background-image: none;
+            border-color: #6c757d;
+            font-size: 20px;
+        }
+    }
