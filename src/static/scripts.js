@@ -62,34 +62,77 @@ document.addEventListener('DOMContentLoaded', () => {
         predictions.forEach((prediction, index) => {
             if (prediction >= 0.75) {
                 wildflowersFound = true;
+
                 const resultItem = document.createElement('div');
                 resultItem.classList.add('result-item');
-                resultItem.innerHTML = `<h2>Congratulations!</h2><h2>You found a wildflower.</h2>The neural network believes there is a ${(prediction * 100).toFixed(2)}% chance that a ${labelNames[index]} is in this image.`;
+
+                resultItem.innerHTML = 
+                `<h2>Congratulations!</h2>
+                <h2>You found a wildflower.
+                </h2>The neural network believes there is a 
+                ${(prediction * 100).toFixed(2)}% 
+                chance that a 
+                ${labelNames[index]} 
+                is in this image.`;
+
                 resultContainer.appendChild(resultItem);
+
                 const explanationItem = document.createElement('div');
                 explanationItem.classList.add('explanation');
-                explanationItem.innerHTML = `Thank you for using this service. <br> Don't let our countryside be as bland as this webpage.`;
+                explanationItem.innerHTML = 
+                `Thank you for using this service. 
+                <br> Don't let our countryside be as bland as this webpage.`;
+
                 explanationContainer.appendChild(explanationItem);
             }
         });
 
         if (!wildflowersFound) {
             const resultItem = document.createElement('div');
-            resultItem.innerHTML = `<h3>Unfortunately, the neural network could not find a wildflower in this image.</h3>Please upload a different image to try again and help rewild our countryside.<br>If problems persist it may be that a wildflower is there but the network hasn't been <br> trained with this species, contact us with any issues.`;
+
+            resultItem.innerHTML = 
+            `<h3>Unfortunately, the neural network could not 
+            find a wildflower in this image.
+            </h3>Please upload a different image to try 
+            again and help rewild our countryside.
+            <br>If problems persist it may be that a 
+            wildflower is there but the network hasn't been 
+            <br> trained with this species, contact 
+            us with any issues.`;
+
             resultContainer.append(resultItem);
+
             document.body.style.backgroundImage = null;
+
             const explanationItem = document.createElement('div');
             explanationItem.classList.add('explanation');
-            explanationItem.innerHTML = `Thank you for using this service. <br> Try again with a different image to see if we can find a wildflower. <br> Don't let our countryside be as bland as this webpage. <br> Let's add the colour back to our flower meadows. <br>`;
+
+            explanationItem.innerHTML = 
+            `Thank you for using this service. 
+            <br> Try again with a different image to see 
+            if we can find a wildflower. 
+            <br> Don't let our countryside be as 
+            bland as this webpage. 
+            <br> Let's add the colour back to our flower meadows. <br>`;
+
             explanationContainer.append(explanationItem);
+
             const brandLink = document.querySelector('.navbar .brand');
             brandLink.innerHTML = 'lostmeadow';
         }
 
         if (wildflowersFound) {
             const imageUrl = '../static/images/wildflower_meadow.jpeg';
-            document.body.style.background = `url('${imageUrl}') no-repeat center center fixed`;
-            document.body.style.backgroundSize = 'cover';
+
+            // Lazy load the image for now
+            const preloadImage = new Image();
+            preloadImage.src = imageUrl;
+            preloadImage.onload = () => {
+                document.body.style.background = 
+                `url('${highQualityUrl}') no-repeat center center fixed`;
+                document.body.style.backgroundSize = 'cover';
+            };
+
             const brandLink = document.querySelector('.navbar .brand');
             brandLink.innerHTML = '<text>found</text>meadow';
         }
