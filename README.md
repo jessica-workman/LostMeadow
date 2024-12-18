@@ -14,7 +14,8 @@ docker run -p 8501:8501 --name=tf_serving --mount type=bind,source=yoursourcefol
 
 Once the container is created and running the application can be run by navigating to the src container and running 'python app.py' in a terminal and then navigate to localhost:5000 in browser
 
-#TODO: 
+# TODO
 Add unit tests 
 Optimse site performance 
+Refactor functions
 Add a linter 
